@@ -1,8 +1,8 @@
 bitcoin:
   uri: test
 
- zuul:
-  routes:
-   paypal-service:
-     path: /paypal-service/**
-     url: http://localhost:8200
+ # zuul:
+ #  routes:
+ #   paypal-service:
+ #     path: /paypal-service/**
+ #     url: http://localhost:8200
