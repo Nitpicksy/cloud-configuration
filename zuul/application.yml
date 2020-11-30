@@ -1,9 +1,10 @@
 bitcoin:
-  uri: test.com
+  uri: healthcheck
+
 ---
 
- # zuul:
- #  routes:
- #   paypal-service:
- #     path: /paypal/**
- #     url: http://localhost:8077
+ zuul:
+  routes:
+   paypal-service:
+     path: /paypal/**
+     url: http://localhost:8077
