@@ -1,9 +1,30 @@
 
 bitcoin:
   uri: healthcheck
+
 ---
- zuul:
+
+zuul:
   routes:
-   paypal-service:
-     path: /paypal/**
-     url: http://localhost:8077
+    payment-gateway:
+      path: /payment-gateway/**
+    literary-society:
+      path: /literary-society/**
+      url: http://localhost:8090
+    bank:
+      path: /bank/**
+      url: http://localhost:8100
+    pcc:
+      path: /pcc/**
+      url: http://localhost:8101
+    paypal-service:
+      path: /paypal-service/**
+      url: http://localhost:8200
+    bitcoin-service:
+      path: /bitcoin-service/**
+      url: http://localhost:8300
+  host:
+    connect-timeout-millis: 5000000
+    socket-timeout-millis: 5000000
+#  prefix: /api
+  ignored-services: '*'
