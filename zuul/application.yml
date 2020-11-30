@@ -1,8 +1,9 @@
 bitcoin:
-  uri: test
+  uri: test.com
 ---
- zuul:
-  routes:
-   paypal-service:
-     path: /paypal/**
-     url: http://localhost:8077
+
+ # zuul:
+ #  routes:
+ #   paypal-service:
+ #     path: /paypal/**
+ #     url: http://localhost:8077
