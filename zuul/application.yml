@@ -1,62 +1,8 @@
-server:
-  port: 8080
+bitcoin:
+  uri: test
 
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://eureka-peer1:8761/eureka,http://eureka-peer2:8762/eureka
-      healthcheck-enabled: true
-
-zuul:
+ zuul:
   routes:
-    payment-gateway:
-      path: /payment-gateway/**
-    literary-society:
-      path: /literary-society/**
-      url: http://localhost:8090
-    bank:
-      path: /bank/**
-      url: http://localhost:8100
-    pcc:
-      path: /pcc/**
-      url: http://localhost:8101
    paypal-service:
      path: /paypal-service/**
      url: http://localhost:8200
-    bitcoin-service:
-      path: /bitcoin-service/**
-      url: http://localhost:8300
-  host:
-    connect-timeout-millis: 5000000
-    socket-timeout-millis: 5000000
-#  prefix: /api
-  ignored-services: '*'
-
-ribbon:
-  eureka:
-    enabled: true
-  ReadTimeout: 60000
-  ConnectTimeout: 6000
-
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 132000
-
-test:
-  value: zdravo
-
-bitcoin:
-  uri: https://bitcoin.com
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-
