@@ -1,7 +1,6 @@
+
 bitcoin:
   uri: healthcheck
-
----
 
  zuul:
   routes:
