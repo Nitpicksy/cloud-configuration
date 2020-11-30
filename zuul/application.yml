@@ -1,6 +1,5 @@
 bitcoin:
-  uri: http://proba.com
-
+  uri: test
 ---
  zuul:
   routes:
