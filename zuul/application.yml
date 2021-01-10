@@ -1,5 +1,5 @@
 bitcoin:
-  uri: https://test.probax
+  uri: https://test.test
 
 zuul:
  routes:
