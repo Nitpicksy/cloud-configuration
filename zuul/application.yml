@@ -2,21 +2,28 @@ bitcoin:
   uri: https://test.test2
 
 zuul:
- routes:
-   payment-gateway:
-     path: /payment-gateway/**
-   literary-society:
-     path: /literary-society/**
-     url: http://localhost:8090
-   bank:
-     path: /bank/**
-     url: http://localhost:8100
-   pcc:
-     path: /pcc/**
-     url: http://localhost:8101
-   paypal-service:
-     path: /paypal-service/**
-     url: http://localhost:8200
-   bitcoin-service:
-     path: /bitcoin-service/**
-     url: http://localhost:8300
+  routes:
+    payment-gateway:
+      path: /payment-gateway/**
+      service-id: payment-gateway
+    literary-society:
+      path: /literary-society/**
+      service-id: literary-society
+    bank:
+      path: /bank/**
+      service-id: bank
+    bank2:
+      path: /bank2/**
+      service-id: bank2
+    pcc:
+      path: /pcc/**
+      service-id: pcc
+    paypal:
+      path: /paypal/**
+      service-id: paypal
+    bitcoin:
+      path: /bitcoin/**
+      service-id: bitcoin
+    qr:
+      path: /qr/**
+      service-id: qr
