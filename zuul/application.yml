@@ -1,5 +1,5 @@
 bitcoin:
-  uri: https://test.tes3t
+  uri: https://test.tes4t
 
 zuul:
   routes:
