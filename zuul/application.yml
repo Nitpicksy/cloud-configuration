@@ -27,3 +27,6 @@ zuul:
     qr:
       path: /qr/**
       service-id: qr
+    literary-society-2:
+      path: /literary-society-2/**
+      service-id: literary-society-2
